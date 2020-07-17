@@ -1,7 +1,12 @@
 .logo-image {
     min-height: 4rem !important;
     max-width: 4rem !important;
-
+    border-radius: 50%;
+}
+.image {
+    // border: 1px solid red;
+    left: 1.5em;
+    // padding-left: 2em;
 }
 .is-flex {
     display: flex;
@@ -13,8 +18,6 @@
     background: #dd6361;
     box-shadow: 0px 1px 25px 5px white;
 }
-
-
 .navbar-end {
     width: 40%;
     justify-content: space-evenly;
@@ -22,18 +25,24 @@
 }
 .navbar-brand {
     justify-content: space-evenly !important;
+    min-width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0 !important;
+    background: #03FF86;
+    min-height: 11vh;
 }
-
 .black {
     color: black;
 }
 .white {
-    color: white !important;
+    color: white !important; 
 }
 
 
 a {
     transition: all .5s linear;
+    font-weight: 800;
 }
 .navbar-end a:hover {
     transform: scale(1.3);
@@ -42,26 +51,25 @@ a {
 
 /* HAMBURGER BUTTON STYLE */
 #wrapper {
-    background:#dd6361;
+    background:#03FF86;
     display:inline-block;
     // border: 1px solid black;
     border-radius:20%;
     margin:20px;
     position: relative;
-    padding:5px;
+    padding:10px;
     cursor:pointer;
 }
 .circle {
-    width:35px;
-    height:40px;
-    position:relative;
-    top: 15%;
+    width: 2.5em;
+    height: 100%;
+    position: relative;
 }
 .line {
     position: absolute;
     height: 5px;
-    width:100%;
-    background:white;
+    width:80%;
+    background:black;
     border-radius:8px;
     transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
 }
@@ -95,12 +103,10 @@ a {
     justify-content: space-evenly;
     text-align: center;
     /* border: 1px solid black; */
-    background-color:#dd6361;
+    background-color:black;
     z-index: 9000;
     border-top: .1px solid darkgray;
 }
-
-
 .modal a {
     text-decoration: none;
     color: white;
@@ -111,8 +117,6 @@ a {
     padding: .5em 0;
     text-transform: capitalize;
 }
-
-
 
 @media only screen and (max-width: 600px) {
     .logo-image {

@@ -1,0 +1,27 @@
+.hero {
+    min-height: 89vh !important;
+    top: 11vh !important;
+    position: fixed !important;
+    width: 100%;
+    background: #03FF86 url(../../images/desktop.jpg) center /  cover;
+}
+.home-container {
+    margin: auto 2em;
+    min-height: 50vh;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    justify-content: space-around;
+    background: rgba($color: #000000, $alpha: .5);
+}
+@media (max-width: 1024px) {
+    .hero {
+        background: #03FF86 url(../../images/tablet.jpg) center /  cover;
+    } 
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background: #03FF86 url(../../images/mobile.jpg) center /  cover;
+    } 
+}

@@ -36,7 +36,7 @@ export default class NavBar extends Component {
     }
     renderMainLinks = () => {
         return (
-            <header className="navbar">
+            
                 <div className="container">
                     <div className="navbar-brand">
                         <a href="/" className='navbar-item'>
@@ -59,7 +59,6 @@ export default class NavBar extends Component {
                         </div>
                     </div>
                 </div>
-            </header>
         )
     }
     render() {
