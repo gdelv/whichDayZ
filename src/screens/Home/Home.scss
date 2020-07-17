@@ -1,4 +1,4 @@
-.hero {
+#home{
     min-height: 89vh !important;
     top: 11vh !important;
     position: fixed !important;
@@ -15,13 +15,13 @@
     background: rgba($color: #000000, $alpha: .5);
 }
 @media (max-width: 1024px) {
-    .hero {
+    #home {
         background: #03FF86 url(../../images/tablet.jpg) center /  cover;
     } 
 }
 
 @media (max-width: 768px) {
-    .hero {
+    #home {
         background: #03FF86 url(../../images/mobile.jpg) center /  cover;
     } 
 }
