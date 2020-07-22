@@ -3,7 +3,7 @@
     top: 11vh !important;
     position: fixed !important;
     width: 100%;
-    background: #03FF86 url(../../images/desktop.jpg) center /  cover;
+    // background: #03FF86 url(../../images/desktop.jpg) center /  cover;
 }
 .home-container {
     margin: auto 2em;
@@ -14,14 +14,14 @@
     justify-content: space-around;
     background: rgba($color: #000000, $alpha: .5);
 }
-@media (max-width: 1024px) {
-    #home {
-        background: #03FF86 url(../../images/tablet.jpg) center /  cover;
-    } 
-}
+// @media (max-width: 1024px) {
+//     #home {
+//         background: #03FF86 url(../../images/tablet.jpg) center /  cover;
+//     } 
+// }
 
-@media (max-width: 768px) {
-    #home {
-        background: #03FF86 url(../../images/mobile.jpg) center /  cover;
-    } 
-}
+// @media (max-width: 768px) {
+//     #home {
+//         background: #03FF86 url(../../images/mobile.jpg) center /  cover;
+//     } 
+// }
