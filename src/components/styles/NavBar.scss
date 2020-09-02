@@ -96,7 +96,7 @@ a {
     height: 90vh;
     width: 100%;
     position: fixed;
-    top: 10vh;
+    top: 13.5vh;
     display: flex;
     flex-direction: column;
     // margin: 0 auto;
@@ -118,6 +118,10 @@ a {
     text-transform: capitalize;
 }
 
+.self-centered {
+    align-self: center;
+}
+
 @media only screen and (max-width: 600px) {
     .logo-image {
     min-height: 4rem !important;
@@ -125,7 +129,7 @@ a {
     }
     .modal {
         height: 89vh;
-        top: 11vh;
+        top: 13.5vh;
     }
 
 }
