@@ -1,8 +1,12 @@
 @import "~slick-carousel/slick/slick.css";
+
 @import "~slick-carousel/slick/slick-theme.css";
 
+.home {
+    /* // width: 100%;  */
+    /* background: #03FF86 url(../../images/desktop.jpg) */
+}
 
-#home {
-    width: 100%;
-    background: #03FF86 url(../../images/desktop.jpg) center /  cover;
+.tablet {
+    /* background: #03FF86 url(../../images/tablet.jpg) */
 }

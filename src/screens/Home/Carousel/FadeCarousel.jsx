@@ -1,11 +1,12 @@
 import React from 'react' 
-import './Carousel.css'
+import './Carousel.scss'
 import Desktop from '../../../images/desktop.jpg'
+import Tablet from '../../../images/tablet.jpg'
 import Slider from 'react-slick';
 
 
 
-export const FadeCoursel = () => {
+export const FadeCarousel = () => {
     const settings = {
         dots: true,
         infinite: true,
@@ -14,11 +15,9 @@ export const FadeCoursel = () => {
         slidesToScroll: 1
     }
     return (
-
         <Slider {...settings}>
-            <section className='hero is-fullheight' id='home'>
-
-            </section>
+            <img src={Desktop}/>
+            <img src={Tablet}/>
         </Slider>
     )
 }
