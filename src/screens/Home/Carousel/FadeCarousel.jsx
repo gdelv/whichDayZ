@@ -10,6 +10,8 @@ export const FadeCarousel = () => {
     const settings = {
         dots: true,
         infinite: true,
+        autoplay: true,
+        fade: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1
