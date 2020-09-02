@@ -11,10 +11,13 @@ export const FadeCarousel = () => {
         dots: true,
         infinite: true,
         autoplay: true,
+        autoplaySpeed: 1000,
+        adaptiveHeight: true,
         fade: true,
         speed: 500,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        focusOnSelect: true
     }
     return (
         <Slider {...settings}>
