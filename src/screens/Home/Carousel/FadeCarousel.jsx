@@ -11,7 +11,7 @@ export const FadeCarousel = () => {
         dots: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 4000,
         adaptiveHeight: true,
         fade: true,
         speed: 500,
