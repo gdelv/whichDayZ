@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './About.scss'
 import Typical from 'react-typical'
 import Typist from 'react-typist'
-import { render } from '@testing-library/react'
 
 export default function About() {
 
@@ -21,15 +20,6 @@ export default function About() {
             <section class="hero is-medium is-primary is-bold">
                 <div class="hero-body">
                     <div class="container has-text-centered">
-                    {/* <Typist
-                    cursor={{show: false}}
-                    >
-                    <h1 class="is-size-2">
-                        Search for your favorite skilled Barista
-                    </h1>
-                    <Typist.Backspace count={7} delay={400}/>
-                        Professional, based on location, day and time.
-                    </Typist> */}
                     <h1 class="is-size-3">
                         Search for your favorite skilled{' '}
                         <Typical
