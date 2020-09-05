@@ -12,7 +12,7 @@ export default function About() {
         setTimeout(() => {
             setFinished('true')
         }, 10000);
-    })
+    }, [])
 
 
     return (
