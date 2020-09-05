@@ -36,14 +36,10 @@ export default class NavBar extends Component {
     }
     renderMainLinks = () => {
         return (
-            
-                <div className="container">
                     <div className="navbar-brand">
-                        <a href="/" className='navbar-item'>
-                            <div className="image">
+                            <div className="image is-flex self-centered">
                                 <img src={logo} alt="logo" className="logo-image"/>
                             </div>
-                        </a>
                         <div id="wrapper" onClick={() => this.handleModal()}>
                             <div className={this.state.buttonClassName}>
                                 <span className="line top"></span>
@@ -58,7 +54,6 @@ export default class NavBar extends Component {
                             </div>
                         </div>
                     </div>
-                </div>
         )
     }
     render() {
