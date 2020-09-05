@@ -10,7 +10,7 @@ export default function About() {
 
     useEffect(() => {
         setTimeout(() => {
-            setFinished('true')
+            setFinished(!finished)
         }, 10000);
     }, [])
 

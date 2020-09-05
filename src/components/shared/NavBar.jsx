@@ -43,7 +43,6 @@ export default class NavBar extends Component {
                         <div id="wrapper" onClick={() => this.handleModal()}>
                             <div className={this.state.buttonClassName}>
                                 <span className="line top"></span>
-                                <span className="line middle"></span>
                                 <span className="line bottom"></span>
                             </div>
                         </div>
