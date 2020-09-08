@@ -30,6 +30,7 @@ export default class NavBar extends Component {
                 <div className="modal">
                     <NavLink exact to='/' onClick={() => this.handleModal()}>Home</NavLink>
                     <NavLink exact to='/about' onClick={() => this.handleModal()}>About</NavLink>
+                    <NavLink exact to='/SignIn' onClick={() => this.handleModal()}>Sign In</NavLink>
                 </div>
             )
         }
