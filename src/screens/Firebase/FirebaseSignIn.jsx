@@ -33,7 +33,7 @@ export default class FirebaseSignIn extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="container has-text-centered">
         {this.state.isSignedIn ? (
           <span>
             <div>Signed In!</div>
