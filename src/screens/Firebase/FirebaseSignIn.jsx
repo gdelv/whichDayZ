@@ -9,7 +9,14 @@ firebase.initializeApp({
 })
 
 export default class FirebaseSignIn extends Component {
-  state = { isSignedIn: false, user: '' }
+  constructor(props) {
+    super(props) 
+  
+  state = { 
+    isSignedIn: false,
+    user: '' 
+  }
+}
   uiConfig = {
     signInFlow: "redirect",
     signInSuccessUrl: '/',
