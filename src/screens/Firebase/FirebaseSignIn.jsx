@@ -12,13 +12,13 @@ export default class FirebaseSignIn extends Component {
   constructor(props) {
     super(props) 
   
-  state = { 
+  this.state = { 
     isSignedIn: false,
     user: '' 
   }
 }
   uiConfig = {
-    signInFlow: "redirect",
+    signInFlow: "popup",
     signInSuccessUrl: '/',
     signInOptions: [
       firebase.auth.GoogleAuthProvider.PROVIDER_ID,
