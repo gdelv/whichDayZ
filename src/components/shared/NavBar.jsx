@@ -52,6 +52,7 @@ export default class NavBar extends Component {
                             <div className="navbar-end is-flex">
                                 <NavLink exact to='/' className='black' activeClassName='white'>Home</NavLink>
                                 <NavLink exact to='/about' className='black' activeClassName='white'>About</NavLink>
+                                <NavLink exact to='/SignIn' className='black' activeClassName='white'>Sign In</NavLink>
                             </div>
                         </div>
                     </div>
