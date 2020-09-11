@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import './Firebase.scss'
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-import { Redirect } from 'react-router-dom'
+
 firebase.initializeApp({
   apiKey: "AIzaSyAToTdC6sGDAasB7Hyv-bggticBmOwmfhs",
-  authDomain: "org.reactjs.native.example.whichday"
+  authDomain: "whichdayz-ce21e.firebaseapp.com"
 })
 
 export default class FirebaseSignIn extends Component {
@@ -37,8 +37,8 @@ export default class FirebaseSignIn extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
       this.setUser(user)
-      // console.log("user", user.displayName)
       console.log(this.state.user)
+      console.log(this.state.isSignedIn)
     })
   }
 
