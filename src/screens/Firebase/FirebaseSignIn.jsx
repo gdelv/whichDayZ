@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import './Firebase.scss'
 import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
-
+import { Redirect } from 'react-router-dom'
 firebase.initializeApp({
   apiKey: "AIzaSyAToTdC6sGDAasB7Hyv-bggticBmOwmfhs",
   authDomain: "org.reactjs.native.example.whichday"
@@ -28,7 +28,7 @@ export default class FirebaseSignIn extends Component {
       firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     callbacks: {
-      signInSuccess: () => false
+      // signInSuccess: () => false
     }
   }
   setUser = user => this.setState({ user })
@@ -37,7 +37,7 @@ export default class FirebaseSignIn extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
       this.setUser(user)
-      console.log("user", user.displayName)
+      // console.log("user", user.displayName)
       console.log(this.state.user)
     })
   }
@@ -52,10 +52,6 @@ export default class FirebaseSignIn extends Component {
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
             <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
-            {/* <img
-              alt="profile picture"
-              src={firebase.auth().currentUser.photoURL}
-            /> */}
           </span>
         ) : (
           <>
