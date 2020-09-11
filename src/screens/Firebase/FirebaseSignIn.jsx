@@ -34,9 +34,12 @@ export default class FirebaseSignIn extends Component {
   setUser = user => this.setState({ user })
 
   componentDidMount = () => {
+
+    const { setUser } = this.props;
+
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
-      this.setUser(user)
+      setUser(user)
       console.log(this.state.user)
       console.log(this.state.isSignedIn)
     })

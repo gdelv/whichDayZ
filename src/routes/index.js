@@ -6,11 +6,12 @@ import Default from '../screens/Default';
 import FirebaseSignIn from '../screens/Firebase/FirebaseSignIn'
 
 
-export const Routes = ({ user, setUser }) => {
+export const Routes = ({ user, setUser, clearUser }) => {
     return (
         <Switch>
             {/* Home Route */}
-            <Route exact path='/' render={props => <Home {...props} user={user}/>}/>
+            <Route exact path='/' 
+            render={props => <Home {...props} user={user}/>}/>
             {/* About Route */}
             <Route exact path='/about' component={About}/>
             {/* Page not found */}
