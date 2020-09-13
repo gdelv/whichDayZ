@@ -15,6 +15,21 @@ export default class NavBar extends Component {
         }
     }
 
+    componentDidMount = () => {
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                let user = firebase.auth().currentUser.displayName
+                this.setState({
+                    user: user
+                })
+                console.log(this.state.user)
+            }
+            else {
+                console.log('nope')
+            }
+        })
+    }
+
 
     changeClassName = () => {
         if(this.state.buttonClassName === 'circle icon') {
@@ -29,8 +44,6 @@ export default class NavBar extends Component {
     }
     renderNavModal = () => {
         if (this.state.modal) {
-
-        
             return (
                 <div className="modal">
                     <NavLink exact to='/' onClick={() => this.handleModal()}>Home</NavLink>
@@ -40,6 +53,8 @@ export default class NavBar extends Component {
             )
         }
     }
+
+    
     renderMainLinks = () => {
         return (
                     <div className="navbar-brand">
