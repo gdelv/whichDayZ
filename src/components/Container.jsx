@@ -1,17 +1,31 @@
 import React from 'react'
 import NavBar from '../components/shared/NavBar'
 import { Routes } from "../routes"
-
+import firebase from "firebase"
 
 export default class Container extends React.Component {
     constructor(props) {
         super(props)
+
+        
 
 
 
         this.state = {
             user: null
         }
+        // this.onChange = this.onChange.bind(this)
+    }
+
+    componentDidMount = () => {
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                console.log(firebase.auth().currentUser.displayName)
+            }
+            else {
+                console.log('nope')
+            }
+        })
     }
 
 
@@ -25,7 +39,10 @@ export default class Container extends React.Component {
         return (
             <>
                 <header className="navbar">
-                    <NavBar user={user} />
+                    <NavBar 
+                    user={user}
+                    // displayName={firebase.auth().currentUser.displayName}
+                     />
                 </header>
                 {/* main */}
                 <main>

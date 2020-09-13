@@ -40,8 +40,9 @@ export default class FirebaseSignIn extends Component {
     firebase.auth().onAuthStateChanged(user => {
       this.setState({ isSignedIn: !!user })
       setUser(user)
-      console.log(this.state.user)
+      console.log(firebase.auth().currentUser)
       console.log(this.state.isSignedIn)
+      console.log(firebase.auth().currentUser.displayName)
     })
   }
 
@@ -54,7 +55,7 @@ export default class FirebaseSignIn extends Component {
           <span>
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
-            <h1>Welcome {firebase.auth().currentUser.displayName}</h1>
+            <h1>Welcome {firebase.auth().currentUser.email}</h1>
           </span>
         ) : (
           <>

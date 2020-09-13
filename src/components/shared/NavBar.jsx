@@ -1,18 +1,21 @@
 import React, { Component } from 'react'
 import { NavLink } from "react-router-dom";
 import '../styles/NavBar.scss'
+import firebase from 'firebase'
 const logo = require('../../images/logo.png')
-
 
 
 export default class NavBar extends Component {
     constructor(props) {
         super(props)
         this.state = {
+            user: '',
             modal: false,
             buttonClassName: 'circle icon'
         }
     }
+
+
     changeClassName = () => {
         if(this.state.buttonClassName === 'circle icon') {
             this.setState({ buttonClassName: 'circle icon close' })
@@ -26,6 +29,8 @@ export default class NavBar extends Component {
     }
     renderNavModal = () => {
         if (this.state.modal) {
+
+        
             return (
                 <div className="modal">
                     <NavLink exact to='/' onClick={() => this.handleModal()}>Home</NavLink>
@@ -55,6 +60,7 @@ export default class NavBar extends Component {
                             <div className="navbar-end is-flex">
                                 <NavLink exact to='/' className='black' activeClassName='white'>Home</NavLink>
                                 <NavLink exact to='/about' className='black' activeClassName='white'>About</NavLink>
+                                
                                 <NavLink exact to='/SignIn' className='black' activeClassName='white'>Sign In</NavLink>
                             </div>
                         </div>
