@@ -10,6 +10,7 @@ export default class NavBar extends Component {
         super(props)
         this.state = {
             user: '',
+            isSignedIn: false,
             modal: false,
             buttonClassName: 'circle icon'
         }
@@ -20,7 +21,8 @@ export default class NavBar extends Component {
             if (user) {
                 let user = firebase.auth().currentUser.displayName
                 this.setState({
-                    user: user
+                    user: user,
+                    isSignedIn: true
                 })
                 console.log(this.state.user)
             }
@@ -42,13 +44,14 @@ export default class NavBar extends Component {
         this.changeClassName();
         this.setState({ modal: !this.state.modal })
     }
+
     renderNavModal = () => {
         if (this.state.modal) {
             return (
                 <div className="modal">
                     <NavLink exact to='/' onClick={() => this.handleModal()}>Home</NavLink>
                     <NavLink exact to='/about' onClick={() => this.handleModal()}>About</NavLink>
-                    <NavLink exact to='/SignIn' onClick={() => this.handleModal()}>Sign In</NavLink>
+                    <NavLink exact to='/SignIn' onClick={() => this.handleModal()}>{this.state.isSignedIn ? 'Sign Out' : 'Sign In'}</NavLink>
                 </div>
             )
         }
