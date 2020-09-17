@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 
 
 
-export const FadeCarousel = () => {
+export const FadeCarousel = (props) => {
     const settings = {
         dots: true,
         infinite: true,
@@ -20,7 +20,7 @@ export const FadeCarousel = () => {
         focusOnSelect: true
     }
     return (
-        <Slider {...settings}>
+        <Slider {...settings} onMouseEnter={props.onMouseEnter}>
             <img src={Desktop}/>
             <img src={Tablet}/>
         </Slider>
